@@ -3,15 +3,15 @@ package com.ing.helloing3
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
-import android.view.View
 import android.widget.Button
-import android.widget.ImageView
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import androidx.core.view.isVisible
+import com.ing.helloing3.activities.GalleryActivity
+import com.ing.helloing3.activities.ListSubjectActivity
+import com.ing.helloing3.usedatabase.UserDatabase
 
 class MainActivity : AppCompatActivity(){
     @SuppressLint("MissingInflatedId", "SetTextI18n")
@@ -25,10 +25,12 @@ class MainActivity : AppCompatActivity(){
             insets
         }
 
+
+
         //============================ Begin of code ==============================================
         val subjectButton = findViewById<Button>(R.id.subjectButton)
         val galleryButton = findViewById<Button>(R.id.galleryButton)
-        val helloTextView = findViewById<TextView>(R.id.helloTextView)
+
         val sendEmailButton = findViewById<Button>(R.id.sendMailButton)
 
         galleryButton.setOnClickListener {
@@ -37,7 +39,8 @@ class MainActivity : AppCompatActivity(){
         }
 
         subjectButton.setOnClickListener{
-            helloTextView.text = "Welcome to subjects!"
+            val intent = Intent(this, ListSubjectActivity::class.java)
+            startActivity(intent)
         }
 
         sendEmailButton.setOnClickListener{

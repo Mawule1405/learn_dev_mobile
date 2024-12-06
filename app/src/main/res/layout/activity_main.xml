@@ -3,77 +3,88 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
+    android:background="@color/backgroud"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/helloTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="serif"
-        android:gravity="center"
-        android:lineSpacingExtra="8sp"
-        android:text="Welcome to ING 3!"
-        android:textAllCaps="false"
-        android:textColor="#F8B133"
-        android:textSize="34sp"
-        android:textStyle="bold"
-        android:typeface="monospace"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.477" />
-
-    <ImageView
-        android:id="@+id/logoImageView"
-        android:layout_width="357dp"
-        android:layout_height="282dp"
-        app:layout_constraintBottom_toTopOf="@+id/helloTextView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.177"
-        app:srcCompat="@mipmap/ic_launcher_foreground" />
-
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="12sp"
+        android:layout_height="match_parent"
+        android:background="@color/backgroud"
         android:gravity="center"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/helloTextView">
+        android:orientation="vertical"
+        android:rotation="0"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:scrollbarStyle="insideOverlay">
 
-        <Button
-            android:id="@+id/galleryButton"
+
+        <ImageView
+            android:id="@+id/logoImageView"
+            android:layout_width="128dp"
+            android:layout_height="128dp"
+            app:srcCompat="@drawable/iai_logo" />
+
+        <TextView
+            android:id="@+id/helloTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="8dp"
-            android:layout_weight="1"
-            android:backgroundTint="#1D1D1B"
-            android:backgroundTintMode="src_atop"
-            android:text="Gallery"
-            android:textSize="14dp" />
+            android:gravity="center"
+            android:text="Promotion\nING3 2024"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:layout_marginBottom="12dp"
+            android:textSize="48sp"
+            android:textStyle="bold" />
 
-        <Button
-            android:id="@+id/subjectButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="8dp"
-            android:layout_weight="1"
-            android:backgroundTint="#1D1D1B"
-            android:text="Subjects"
-            android:textSize="14sp" />
 
-        <Button
-            android:id="@+id/sendMailButton"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:backgroundTint="#1D1D1B"
-            android:text="Send mail" />
+            android:layout_marginHorizontal="12sp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/galleryButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="4dp"
+                android:layout_marginVertical="2dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/black"
+                android:backgroundTintMode="src_atop"
+                android:text="Gallery"
+                android:textAllCaps="true"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/subjectButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="4dp"
+                android:layout_marginVertical="2dp"
+                android:layout_weight="1"
+                android:backgroundTint="#1D1D1B"
+                android:text="Subjects"
+                android:textAllCaps="true"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/sendMailButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="4dp"
+                android:layout_marginVertical="2dp"
+                android:layout_weight="1"
+                android:backgroundTint="#1D1D1B"
+                android:text="Send mail"
+                android:textAllCaps="true"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">hello Ing3</string>
+    <string name="app_name">ING3 2024</string>
+    <string name="subjectHeader">Liste des matières</string>
+    <string name="ajouter_un_tudiant">Ajouter un étudiant</string>
 </resources>

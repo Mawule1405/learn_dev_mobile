@@ -5,31 +5,65 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".GalleryActivity">
+    android:background="@color/backgroud"
+    tools:context=".activities.GalleryActivity">
 
     <LinearLayout
-        android:layout_width="391dp"
-        android:layout_height="805dp"
-        android:gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="1dp"
-        tools:ignore="MissingConstraints">
+        android:padding="16dp">
 
-        <Button
-            android:id="@+id/consulterButton"
+        <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="4dp"
-            android:layout_marginVertical="14dp"
-            android:text="Consulter" />
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/iai_logo" />
 
-        <Button
-            android:id="@+id/ajouterButton"
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="8dp"
-            android:layout_marginVertical="14dp"
-            android:text="Ajouter" />
+            android:text="Souvenir de la promotion ING3 2024"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:layout_marginVertical="8dp"
+            android:textSize="32dp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginVertical="8dp">
+
+            <ImageView
+                android:id="@+id/souvenirImageView"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="300dp"
+                android:layout_marginBottom="8dp"
+                android:src="@drawable/souvenir1" />
+
+            <Button
+                android:id="@+id/addNewStudentButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="4dp"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="@color/black"
+                android:text="Ajouter un étudiant"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/listOfStudentButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="4dp"
+                android:backgroundTint="@color/black"
+                android:text="Liste des étudiants"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+        </LinearLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
